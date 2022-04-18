@@ -1,0 +1,94 @@
+# 56, 40, 81
+MDScreen:
+    md_bg_color:56/255,40/255,81/255,1
+    MDBoxLayout:
+        orientation:'vertical'
+        MDBoxLayout:
+            size_hint_y:.25
+            padding:dp(25)
+            MDBoxLayout:
+                orientation:"vertical"
+                MDLabel:
+                    text:"Hussam's Family"
+                    font_style:"H4"
+                MDBoxLayout:
+                    adaptive_size:True
+                    spacing:dp(10)
+                    MDLabel:
+                        text:"Home"
+                        text_size:None,None
+                        adaptive_width:True
+                    MDIcon:
+                        icon:'chevron-down'
+
+            MDIconButton:
+                icon:"images/notification.png"
+        MDGridLayout:
+            size_hint_y:.75
+            cols:2
+            padding:[dp(15),dp(15),dp(15),dp(35)]
+            spacing:dp(15)
+            ElementCard:
+                image:"images/calendar.png"
+                text:"Calender"
+                subtext:"March, Wednesday"
+                items_count:"3 Events"
+
+            ElementCard:
+                image:"images/food.png"
+                text:"Groceries"
+                subtext:"Broccoli, Apple"
+                items_count:"4 Items"
+
+            ElementCard:
+                image:"images/map.png"
+                text:"Location"
+                subtext:"Lucy Mao going to Office"
+                items_count:""
+
+            ElementCard:
+                image:"images/festival.png"
+                text:"Activity"
+                items_count:""
+                subtext:"Rose favorite your Post"
+
+            ElementCard:
+                image:"images/todo.png"
+                text:"To Do"
+                subtext:"Homework, Design"
+                items_count:"4 Items"
+
+            ElementCard:
+                image:"images/setting.png"
+                text:"Setting"
+                subtext:""
+                items_count:"4 Items"
+
+
+<ElementCard@MDCard>:
+    md_bg_color:69/255,55/255,86/255,1
+    padding:dp(15)
+    spacing:dp(15)
+    radius:dp(25)
+    ripple_behavior: True
+    image:''
+    text:""
+    items_count:""
+    subtext:''
+
+    orientation:'vertical'
+    Image:
+        source:root.image
+    MDBoxLayout:
+        orientation:'vertical'
+        MDLabel:
+            halign:"center"
+            text:root.text
+            font_style:"H6"
+        MDLabel:
+            halign:"center"
+            font_style:"Caption"
+            text:root.subtext
+        MDLabel:
+            halign:"center"
+            text:root.items_count
